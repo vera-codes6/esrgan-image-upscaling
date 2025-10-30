@@ -27,7 +27,7 @@ def test_realesrnet_model():
     kernel2 = torch.rand((1, 5, 5), dtype=torch.float32)
     sinc_kernel = torch.rand((1, 5, 5), dtype=torch.float32)
     data = dict(gt=gt, kernel1=kernel1, kernel2=kernel2, sinc_kernel=sinc_kernel)
-    # model.feed_data(data)
+    model.feed_data(data)
     # check dequeue
     model.feed_data(data)
     # check data shape
